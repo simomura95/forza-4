@@ -7,6 +7,7 @@ def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+cls()
 print('''
   _____                        _  _   
  |  ___|__  _ __ ______ _     | || |  
@@ -31,4 +32,7 @@ while game_is_on and t.turn <= 42:
         cls()
 
 t.print_board()
-print(f'Player {t.player} wins!')
+if t.turn < 42:
+    print(f'Player {t.player} wins!')
+else:
+    print('It\'s a tie!')
